@@ -91,6 +91,11 @@ scripts/        build.sh (universal + podpis + notaryzacja), Ikona.swift
 tests/          generator skanów, sonda rozpoznawania, zrzuty interfejsu
 ```
 
+## Licencja
+
+[MIT](LICENSE) © 2026 Przemysław Plewiński. Program nie jest poradą prawną — opisy załączników
+zawsze warto przejrzeć przed złożeniem pisma.
+
 ## Uwagi techniczne
 
 - Narzędzia z macOS 27 nie mają bibliotek zgodności Swift dla Intela → minimum 12.3 i
