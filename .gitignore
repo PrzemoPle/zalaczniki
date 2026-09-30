@@ -1,0 +1,5 @@
+build/
+tests/samples/
+.DS_Store
+*.dmg
+*.zip
