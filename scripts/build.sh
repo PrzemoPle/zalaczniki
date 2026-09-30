@@ -13,7 +13,8 @@ set -euo pipefail
 KORZEN="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 BUDOWA="$KORZEN/build"
 APP="$BUDOWA/Załączniki.app"
-WERSJA="1.0.0"
+WERSJA="1.1.0"
+DATA_WYDANIA="2026-09-30"   # pokazywana w oknie „O aplikacji"
 MINIMUM="12.3"
 PROFIL="${ZALACZNIKI_PROFIL_NOTARYZACJI:-zalaczniki}"
 
@@ -62,6 +63,8 @@ cat > "$APP/Contents/Info.plist" <<PLIST
   <key>LSMinimumSystemVersion</key>       <string>$MINIMUM</string>
   <key>LSApplicationCategoryType</key>    <string>public.app-category.productivity</string>
   <key>NSHighResolutionCapable</key>      <true/>
+  <key>ZALDataWydania</key>               <string>$DATA_WYDANIA</string>
+  <key>NSHumanReadableCopyright</key>     <string>© 2026 Przemysław Plewiński · Licencja MIT</string>
 </dict>
 </plist>
 PLIST

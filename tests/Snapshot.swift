@@ -51,6 +51,7 @@ struct Snapshot {
             model.removeAll()
             shot("4-pusty", false, size: NSSize(width: 900, height: 600), ContentView())
             shot("5-ustawienia", false, size: NSSize(width: 520, height: 470), SettingsView())
+            for dark in [false, true] { shot("6-o-aplikacji", dark, size: NSSize(width: 420, height: 470), AboutView()) }
             print("Zapisano do \(out.path)")
             exit(0)
         }

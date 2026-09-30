@@ -1,6 +1,18 @@
 import SwiftUI
 
 struct SettingsView: View {
+    var body: some View {
+        TabView {
+            AISettingsView()
+                .tabItem { Label("Opis przez AI", systemImage: "sparkles") }
+            AboutView()
+                .frame(width: 520)
+                .tabItem { Label("O aplikacji", systemImage: "info.circle") }
+        }
+    }
+}
+
+struct AISettingsView: View {
     @EnvironmentObject var model: AppModel
     // @State to w SDK macOS 27 makro dostępne tylko z Xcode — używamy typu State wprost.
     private let draft = State(initialValue: "")

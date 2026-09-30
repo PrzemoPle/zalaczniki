@@ -16,6 +16,9 @@ struct ZalacznikiApp: App {
             ContentView().environmentObject(model)
         }
         .commands {
+            CommandGroup(replacing: .appInfo) {
+                Button("O aplikacji \(AppInfo.name)", action: AboutWindow.show)
+            }
             CommandGroup(replacing: .newItem) {
                 Button("Dodaj pliki…", action: model.openPanel).keyboardShortcut("o")
             }
